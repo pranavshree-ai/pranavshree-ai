@@ -12,6 +12,12 @@
   <a href="mailto:pranav.shree96@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
 </p>
 
+<p align="center">
+  <a href="https://pranavshree-ai.github.io/pranavshree-ai/">
+    <img src="https://img.shields.io/badge/✨_Launch_3D_Interactive_Experience-WebGL_•_Vanta_Fog_•_GSAP_•_Lenis-22D3EE?style=for-the-badge&labelColor=0B1220&logo=three.js&logoColor=22D3EE" alt="Launch 3D WebGL Portfolio Experience">
+  </a>
+</p>
+
 ## 👋 About Me
 
 I'm a production-focused **Machine Learning Engineer** specialising in **LLMOps, MLOps and Generative AI**. I work across the whole loop: training models in PyTorch and PyTorch Lightning, fine-tuning transformers with HuggingFace PEFT/LoRA, evaluating LLMs (AI-judge, drift detection, auto fine-tuning triggers), optimising inference (vLLM, ONNX INT8, 4-bit quantisation, sub-50ms p50) and deploying on AWS and GCP.
