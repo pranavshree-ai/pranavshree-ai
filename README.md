@@ -14,8 +14,11 @@
 
 <p align="center">
   <a href="https://pranavshree-ai.github.io/pranavshree-ai/">
-    <img src="https://img.shields.io/badge/✨_Launch_3D_Interactive_Experience-WebGL_•_Vanta_Fog_•_GSAP_•_Lenis-22D3EE?style=for-the-badge&labelColor=0B1220&logo=three.js&logoColor=22D3EE" alt="Launch 3D WebGL Portfolio Experience">
+    <img src="https://img.shields.io/badge/🚀_LAUNCH_LIVE_3D_EXPERIENCE-WebGL_·_Vanta_3D_Fog_·_GSAP_·_Lenis-00F5FF?style=for-the-badge&labelColor=0B1220&logo=three.js&logoColor=00F5FF" height="42" alt="Launch 3D WebGL Portfolio Experience">
   </a>
+</p>
+<p align="center">
+  <sub>✨ <b>Click the badge above to launch the real-time 3D Vanta Fog WebGL experience, self-healing loop simulator & interactive terminal.</b></sub>
 </p>
 
 ## 👋 About Me
@@ -214,6 +217,17 @@ class Pranav:
 <td align="center" width="25%"><b>💼 LinkedIn</b><br><sub>Building in public<br>W&B dashboards, benchmarks</sub></td>
 </tr>
 </table>
+
+---
+
+## 📊 3D Contribution Graph
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-rainbow.svg">
+    <img src="profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="Pranav Jadhav 3D Contribution Graph">
+  </picture>
+</p>
 
 ---
 
