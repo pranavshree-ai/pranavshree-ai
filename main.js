@@ -1,6 +1,6 @@
 /**
- * PRANAV JADHAV — 3D GITHUB PROFILE INTERACTION ENGINE
- * Powered by Lenis, GSAP, Vanta.js Fog, and React Bits Components
+ * PRANAV JADHAV — NOCTURNE ATELIER INTERACTION ENGINE
+ * Built with Lenis, GSAP, Vanta Fog (Nocturne Palette), and React Bits Components
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,26 +10,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* =====================================================================
-     1. LENIS SMOOTH SCROLL & GSAP SCROLLTRIGGER SYNCHRONIZATION
+     1. LENIS SMOOTH SCROLL & GSAP SYNCHRONIZATION
      ===================================================================== */
   let lenis;
   try {
     if (typeof Lenis !== 'undefined') {
       lenis = new Lenis({
-        duration: 1.2,
+        duration: 1.3,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         smoothWheel: true,
         smoothTouch: false,
       });
 
-      // Synchronize Lenis with GSAP ScrollTrigger
       if (typeof ScrollTrigger !== 'undefined' && typeof gsap !== 'undefined') {
         lenis.on('scroll', ScrollTrigger.update);
-
         gsap.ticker.add((time) => {
           lenis.raf(time * 1000);
         });
-
         gsap.ticker.lagSmoothing(0);
       } else {
         function raf(time) {
@@ -39,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(raf);
       }
 
-      // Smooth scroll for internal anchor links
+      // Smooth scroll anchor links
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener('click', function (e) {
           const href = this.getAttribute('href');
@@ -47,17 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
           const target = document.querySelector(href);
           if (target) {
             e.preventDefault();
-            lenis.scrollTo(target, { offset: -30 });
+            lenis.scrollTo(target, { offset: -40 });
           }
         });
       });
     }
   } catch (err) {
-    console.warn('Lenis smooth scroll initialization error:', err);
+    console.warn('Lenis initialization notice:', err);
   }
 
   /* =====================================================================
-     2. 3D VANTA.JS FOG BACKGROUND EFFECT (Three.js WebGL)
+     2. 3D VANTA.JS FOG (NOCTURNE ATELIER PALETTE)
      ===================================================================== */
   let vantaEffect = null;
   const vantaEl = document.getElementById('vanta-bg');
@@ -71,47 +68,43 @@ document.addEventListener('DOMContentLoaded', () => {
         gyroControls: false,
         minHeight: 200.0,
         minWidth: 200.0,
-        highlightColor: 0x22d3ee, // Neon Cyan
-        midtoneColor: 0x0ea5e9,   // Sky Blue
-        lowlightColor: 0x0f172a,  // Deep Slate Navy
-        baseColor: 0x030712,      // Cosmic Void Black
-        blurFactor: 0.65,
-        zoom: 1.15,
-        speed: 1.25,
+        highlightColor: 0xa8d4ff, // Crystalline Ice-Blue
+        midtoneColor: 0x142238,   // Deep Midnight Azure
+        lowlightColor: 0x070b12,  // Deep Obsidian Slate
+        baseColor: 0x060606,      // Endless Dark Void
+        blurFactor: 0.72,
+        zoom: 1.1,
+        speed: 1.05,
       });
     } catch (err) {
-      console.warn('Vanta Fog initialization fallback:', err);
+      console.warn('Vanta Fog fallback notice:', err);
     }
   }
 
   /* =====================================================================
-     3. REACT BITS: SPOTLIGHT CARD & 3D PERSPECTIVE TILT
+     3. REACT BITS: SPOTLIGHT CARD & 3D TILT
      ===================================================================== */
   const spotlightCards = document.querySelectorAll('.spotlight-card');
 
   spotlightCards.forEach((card) => {
-    // Mouse movement inside card
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
 
-      // Update CSS variables for radial spotlight gradient
       card.style.setProperty('--mouse-x', `${x}px`);
       card.style.setProperty('--mouse-y', `${y}px`);
 
-      // 3D Perspective Tilt Calculation
       if (!card.classList.contains('no-tilt')) {
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        const rotateX = ((y - centerY) / centerY) * -5.5; // subtle degrees
-        const rotateY = ((x - centerX) / centerX) * 5.5;
+        const rotateX = ((y - centerY) / centerY) * -4.5;
+        const rotateY = ((x - centerX) / centerX) * 4.5;
 
         card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-2px)`;
       }
     });
 
-    // Reset on mouse leave
     card.addEventListener('mouseleave', () => {
       card.style.setProperty('--mouse-x', `-500px`);
       card.style.setProperty('--mouse-y', `-500px`);
@@ -123,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* =====================================================================
-     4. CURSOR GLOW FOLLOW EFFECT
+     4. CURSOR SPOTLIGHT TRACKING
      ===================================================================== */
   const cursorGlow = document.getElementById('cursor-glow');
   if (cursorGlow) {
@@ -137,18 +130,18 @@ document.addEventListener('DOMContentLoaded', () => {
       mouseY = e.clientY;
     });
 
-    function renderCursor() {
-      curX += (mouseX - curX) * 0.15;
-      curY += (mouseY - curY) * 0.15;
+    function renderGlow() {
+      curX += (mouseX - curX) * 0.12;
+      curY += (mouseY - curY) * 0.12;
       cursorGlow.style.left = `${curX}px`;
       cursorGlow.style.top = `${curY}px`;
-      requestAnimationFrame(renderCursor);
+      requestAnimationFrame(renderGlow);
     }
-    renderCursor();
+    renderGlow();
   }
 
   /* =====================================================================
-     5. REACT BITS: MAGNET PHYSICS ON BUTTONS & BADGES
+     5. REACT BITS: MAGNET PHYSICS
      ===================================================================== */
   const magnetItems = document.querySelectorAll('.magnet');
 
@@ -157,8 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const rect = el.getBoundingClientRect();
       const elCenterX = rect.left + rect.width / 2;
       const elCenterY = rect.top + rect.height / 2;
-      const deltaX = (e.clientX - elCenterX) * 0.35;
-      const deltaY = (e.clientY - elCenterY) * 0.35;
+      const deltaX = (e.clientX - elCenterX) * 0.32;
+      const deltaY = (e.clientY - elCenterY) * 0.32;
 
       if (typeof gsap !== 'undefined') {
         gsap.to(el, {
@@ -187,53 +180,52 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* =====================================================================
-     6. REACT BITS: DECRYPTED / HACKER TEXT ANIMATION
+     6. REACT BITS: CIPHER DECRYPTED TEXT
      ===================================================================== */
-  const chars = '!<>-_\\/[]{}—=+*^?#________0101';
+  const glyphs = 'abcdefghijklmnopqrstuvwxyz0123456789!<>_\\/[]{}—=+*^';
 
   function scrambleText(element, finalString, duration = 1200) {
     const startTime = performance.now();
     const length = finalString.length;
 
-    function update() {
+    function frame() {
       const now = performance.now();
       const progress = Math.min((now - startTime) / duration, 1);
-      const revealedCount = Math.floor(progress * length);
+      const revealed = Math.floor(progress * length);
 
-      let output = '';
+      let str = '';
       for (let i = 0; i < length; i++) {
-        if (i < revealedCount) {
-          output += finalString[i];
+        if (i < revealed) {
+          str += finalString[i];
         } else if (finalString[i] === ' ') {
-          output += ' ';
+          str += ' ';
         } else {
-          output += chars[Math.floor(Math.random() * chars.length)];
+          str += glyphs[Math.floor(Math.random() * glyphs.length)];
         }
       }
 
-      element.textContent = output;
+      element.textContent = str;
 
       if (progress < 1) {
-        requestAnimationFrame(update);
+        requestAnimationFrame(frame);
       } else {
         element.textContent = finalString;
       }
     }
 
-    requestAnimationFrame(update);
+    requestAnimationFrame(frame);
   }
 
-  // Trigger Decrypted title on Hero on load
-  const heroTitleElement = document.querySelector('.decrypted-title');
-  if (heroTitleElement) {
-    const originalText = heroTitleElement.getAttribute('data-text') || heroTitleElement.textContent;
+  const heroTitle = document.querySelector('.decrypted-title');
+  if (heroTitle) {
+    const original = heroTitle.getAttribute('data-text') || heroTitle.textContent;
     setTimeout(() => {
-      scrambleText(heroTitleElement, originalText, 1400);
-    }, 300);
+      scrambleText(heroTitle, original, 1300);
+    }, 250);
   }
 
   /* =====================================================================
-     7. GSAP SCROLLTRIGGER: ENTRANCE ANIMATIONS & COUNTERS
+     7. GSAP SCROLL ENTRANCES & METRIC COUNTERS
      ===================================================================== */
   if (typeof gsap !== 'undefined') {
     if (typeof ScrollTrigger !== 'undefined') {
@@ -241,15 +233,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Fade-up elements
-    const fadeUpEls = document.querySelectorAll('[data-gsap="fade-up"]');
-    fadeUpEls.forEach((el) => {
+    document.querySelectorAll('[data-gsap="fade-up"]').forEach((el) => {
       gsap.fromTo(
         el,
         { opacity: 0, y: 35 },
         {
           opacity: 1,
           y: 0,
-          duration: 0.85,
+          duration: 0.9,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: el,
@@ -260,9 +251,8 @@ document.addEventListener('DOMContentLoaded', () => {
       );
     });
 
-    // Metric Counters with localized numbers
-    const metricCounters = document.querySelectorAll('.metric-counter');
-    metricCounters.forEach((counter) => {
+    // Metric numbers animation
+    document.querySelectorAll('.metric-counter').forEach((counter) => {
       const targetVal = parseFloat(counter.getAttribute('data-target') || '0');
 
       ScrollTrigger.create({
@@ -298,24 +288,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const simStatusText = document.getElementById('sim-status-text');
   const simLogOutput = document.getElementById('sim-log-output');
 
-  let isSimulating = false;
+  let isRunning = false;
 
-  function appendSimLog(text, type = 'info') {
+  function writeLog(text, type = 'info') {
     if (!simLogOutput) return;
     const time = new Date().toLocaleTimeString('en-US', { hour12: false });
-    const logLine = document.createElement('div');
-    logLine.className = `log-line ${type}`;
-    logLine.textContent = `[${time}] ${text}`;
-    simLogOutput.appendChild(logLine);
+    const row = document.createElement('div');
+    row.className = `log-row ${type}`;
+    row.textContent = `[${time}] ${text}`;
+    simLogOutput.appendChild(row);
     simLogOutput.scrollTop = simLogOutput.scrollHeight;
   }
 
   if (simBtn) {
     simBtn.addEventListener('click', () => {
-      if (isSimulating) return;
-      isSimulating = true;
+      if (isRunning) return;
+      isRunning = true;
       simBtn.disabled = true;
-      simBtn.style.opacity = '0.6';
+      simBtn.style.opacity = '0.5';
 
       const nodes = [
         document.getElementById('step-node-1'),
@@ -324,63 +314,62 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('step-node-4'),
       ];
 
-      const connectors = [
+      const arrows = [
         document.getElementById('connector-1'),
         document.getElementById('connector-2'),
         document.getElementById('connector-3'),
       ];
 
-      // Step 1: Normal Evaluation
-      simIndicator.className = 'sim-indicator';
-      simStatusText.textContent = 'Pipeline Status: Evaluating live traffic';
+      // Stage 1: Evaluate
+      simIndicator.className = 'status-indicator';
+      simStatusText.textContent = 'SYSTEM STATUS: EVALUATING ACTIVE TRAFFIC';
       nodes[0].classList.add('active-node');
-      appendSimLog('STAGE 1 [EVALUATE]: Incoming request batch evaluated by dual AI judges.', 'info');
+      writeLog('STAGE 01 [EVALUATE]: Dual judges (Phi-3 & Claude) scoring batch against Pydantic schema.', 'info');
 
       setTimeout(() => {
-        // Pulse Connector 1
-        connectors[0].querySelector('.connector-pulse').classList.add('running');
-        appendSimLog('STAGE 1: Pydantic response valid. Inter-rater score agreement: 94.1%.', 'success');
+        arrows[0].querySelector('.arrow-pulse').classList.add('running');
+        writeLog('STAGE 01: Pydantic validation 100%. Inter-rater agreement: 94.1%.', 'success');
       }, 700);
 
-      // Step 2: Inject Synthetic Drift Alert
+      // Stage 2: Drift
       setTimeout(() => {
         nodes[0].classList.remove('active-node');
         nodes[1].classList.add('active-node');
-        simIndicator.className = 'sim-indicator active-drift';
-        simStatusText.textContent = 'Pipeline Status: Concept Drift Detected (< 0.85 threshold)';
-        appendSimLog('STAGE 2 [DETECT DRIFT]: Evidently AI test suite flagged embedding shift (score = 0.812).', 'alert');
-        appendSimLog('STAGE 2: Alert triggered -> Dispatched automated LoRA retraining payload.', 'warn');
+        simIndicator.className = 'status-indicator active-drift';
+        simStatusText.textContent = 'SYSTEM STATUS: EMBEDDING DRIFT DETECTED (< 0.85)';
+        writeLog('STAGE 02 [DETECT DRIFT]: Evidently AI statistical test flagged concept shift (score = 0.812).', 'alert');
+        writeLog('STAGE 02: Alert threshold triggered -> Dispatched automated LoRA retraining payload.', 'warn');
       }, 1600);
 
-      // Step 3: LoRA Training Job
+      // Stage 3: Fine-Tune
       setTimeout(() => {
-        connectors[1].querySelector('.connector-pulse').classList.add('running');
+        arrows[1].querySelector('.arrow-pulse').classList.add('running');
         nodes[1].classList.remove('active-node');
         nodes[2].classList.add('active-node');
-        simIndicator.className = 'sim-indicator active-tune';
-        simStatusText.textContent = 'Pipeline Status: Automated PEFT / LoRA Fine-Tuning Job Active';
-        appendSimLog('STAGE 3 [FINE-TUNE]: Initializing PEFT container (r=16, alpha=32, target=q_proj,v_proj).', 'info');
-        appendSimLog('STAGE 3: 3 epochs completed on curated edge cases -> Adapter pushed to HuggingFace Hub.', 'success');
+        simIndicator.className = 'status-indicator active-tune';
+        simStatusText.textContent = 'SYSTEM STATUS: AUTOMATED PEFT / LORA JOB RUNNING';
+        writeLog('STAGE 03 [FINE-TUNE]: Initializing PEFT container (r=16, alpha=32) on curated failure cases.', 'info');
+        writeLog('STAGE 03: 3 epochs completed -> Calibrated adapter pushed to HuggingFace Hub.', 'success');
       }, 3000);
 
-      // Step 4: vLLM Hot Swap & Redeploy
+      // Stage 4: Redeploy
       setTimeout(() => {
-        connectors[2].querySelector('.connector-pulse').classList.add('running');
+        arrows[2].querySelector('.arrow-pulse').classList.add('running');
         nodes[2].classList.remove('active-node');
         nodes[3].classList.add('active-node');
-        simIndicator.className = 'sim-indicator';
-        simStatusText.textContent = 'Pipeline Status: Hot-swapping vLLM Model Weights';
-        appendSimLog('STAGE 4 [REDEPLOY]: vLLM serving swapped active LoRA adapter without downtime.', 'success');
-        appendSimLog('STAGE 4: Latency p50 verified at 42ms. Agreement restored to 95.8%.', 'success');
+        simIndicator.className = 'status-indicator';
+        simStatusText.textContent = 'SYSTEM STATUS: vLLM SERVING HOT-SWAP';
+        writeLog('STAGE 04 [REDEPLOY]: vLLM hot-swapped LoRA adapter weights in real-time.', 'success');
+        writeLog('STAGE 04: Zero dropped requests. P50 latency verified at 42ms. Agreement restored to 95.8%.', 'success');
       }, 4500);
 
-      // Return to Steady State
+      // Completed
       setTimeout(() => {
         nodes[3].classList.remove('active-node');
-        connectors.forEach((c) => c.querySelector('.connector-pulse').classList.remove('running'));
-        simStatusText.textContent = 'Pipeline Status: Active Observation (Self-Healed)';
-        appendSimLog('CYCLE COMPLETE: System self-healed successfully with 0 human steps.', 'success');
-        isSimulating = false;
+        arrows.forEach((a) => a.querySelector('.arrow-pulse').classList.remove('running'));
+        simStatusText.textContent = 'SYSTEM STATUS: OBSERVATION ACTIVE (SELF-HEALED)';
+        writeLog('CYCLE COMPLETE: Closed loop self-healed successfully with 0 human steps.', 'success');
+        isRunning = false;
         simBtn.disabled = false;
         simBtn.style.opacity = '1';
       }, 6000);
@@ -388,7 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* =====================================================================
-     9. INTERACTIVE SYSTEM REPL / CLASS PRANAV
+     9. INTERACTIVE SYSTEM SPECIFICATION (CLASS PRANAV)
      ===================================================================== */
   const runCodeBtn = document.getElementById('run-code-btn');
   const copyCodeBtn = document.getElementById('copy-code-btn');
@@ -401,24 +390,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const lines = [
         { text: '>>> pranav = Pranav()', cls: 'out-dim' },
-        { text: '>>> diagnostics = pranav.build_system()', cls: 'out-dim' },
-        { text: '>>> [INFO] Initializing system telemetry...', cls: 'out-cyan' },
-        { text: '✓ Role: "Machine Learning Engineer, LLMOps, MLOps, GenAI"', cls: 'out-success' },
-        { text: '✓ Philosophy: "Correct, not just fluent"', cls: 'out-success' },
-        { text: '✓ Vectors Indexed: 1,037,086 in single Qdrant node', cls: 'out-cyan' },
-        { text: '✓ AI Judge Inter-rater Agreement: 94.0%', cls: 'out-cyan' },
-        { text: '✓ P50 Latency: 42ms (ONNX INT8 quantized)', cls: 'out-cyan' },
-        { text: '✓ Uptime Guarantee: 99.99%', cls: 'out-success' },
-        { text: '>>> System Status: READY_FOR_DEPLOYMENT', cls: 'out-success' },
+        { text: '>>> system_spec = pranav.build_system()', cls: 'out-dim' },
+        { text: '>>> [INFO] Initializing system telemetry...', cls: 'out-ice' },
+        { text: '✓ Role: "Machine Learning Engineer, LLMOps, MLOps, GenAI"', cls: 'out-green' },
+        { text: '✓ Philosophy: "Correct, not just fluent"', cls: 'out-green' },
+        { text: '✓ Vector Index Capacity: 1,037,086 vectors in 1 Qdrant container', cls: 'out-ice' },
+        { text: '✓ AI Judge Inter-rater Agreement: 94.0%', cls: 'out-ice' },
+        { text: '✓ P50 Latency: 42ms (ONNX INT8 quantized)', cls: 'out-ice' },
+        { text: '✓ Uptime SLA: 99.99%', cls: 'out-green' },
+        { text: '>>> System Status: READY_FOR_DEPLOYMENT', cls: 'out-green' },
       ];
 
       lines.forEach((line, index) => {
         setTimeout(() => {
           const p = document.createElement('p');
-          p.className = `out-line ${line.cls}`;
+          p.className = `out-row ${line.cls}`;
           p.textContent = line.text;
           consoleOutput.appendChild(p);
-        }, index * 120);
+        }, index * 110);
       });
     });
   }
@@ -456,17 +445,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* =====================================================================
-     10. PROJECT CATEGORY FILTER PILLS
+     10. PROJECT CATEGORY FILTER
      ===================================================================== */
-  const filterPills = document.querySelectorAll('.filter-pill');
-  const projectCards = document.querySelectorAll('.project-card');
+  const filterTabs = document.querySelectorAll('.filter-tab');
+  const projectCards = document.querySelectorAll('.project-hero-card, .project-sub-card');
 
-  filterPills.forEach((pill) => {
-    pill.addEventListener('click', () => {
-      filterPills.forEach((p) => p.classList.remove('active'));
-      pill.classList.add('active');
+  filterTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      filterTabs.forEach((t) => t.classList.remove('active'));
+      tab.classList.add('active');
 
-      const filter = pill.getAttribute('data-filter');
+      const filter = tab.getAttribute('data-filter');
 
       projectCards.forEach((card) => {
         const cat = card.getAttribute('data-category');
@@ -486,7 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (typeof gsap !== 'undefined') {
             gsap.to(card, {
               opacity: 0,
-              scale: 0.95,
+              scale: 0.96,
               duration: 0.25,
               onComplete: () => {
                 card.style.display = 'none';

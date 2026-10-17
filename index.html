@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pranav Jadhav | 3D Machine Learning Engineer Profile</title>
-  <meta name="description" content="Pranav Jadhav - Machine Learning Engineer specializing in LLMOps, MLOps, and Generative AI. Autonomous self-healing ML pipelines, 1M+ vector RAG, and sub-50ms inference.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Pranav Jadhav — Machine Learning Engineer · LLMOps & MLOps</title>
+  <meta name="description" content="Strategic Machine Learning Engineer specializing in LLMOps, MLOps, Generative AI, autonomous self-healing model pipelines, 1M+ vector RAG, and sub-50ms inference.">
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
-  <!-- Google Fonts -->
+  <!-- Typography: Newsreader (Editorial Serif) + Inter (Clean Sans) + Space Mono & Fira Code (Technical Precision) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -20,254 +20,227 @@
   <!-- External Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-theme">
-  <!-- 3D Vanta.js Fog Background Canvas Container -->
+<body class="bg-base text-primary selection-accent">
+
+  <!-- 3D Vanta.js Fog Background Canvas (Nocturne Palette: Obsidian, Crystalline Ice-Blue & Midnight Navy) -->
   <div id="vanta-bg" aria-hidden="true"></div>
   <div class="noise-overlay" aria-hidden="true"></div>
-  <div class="ambient-glow glow-1" aria-hidden="true"></div>
-  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="glow-orb glow-ice" aria-hidden="true"></div>
+  <div class="glow-orb glow-amber" aria-hidden="true"></div>
 
-  <!-- Custom Cursor / Spotlight Follower -->
+  <!-- Reactive Spotlight Follower -->
   <div id="cursor-glow" aria-hidden="true"></div>
 
-  <!-- Fixed Top Floating Navigation (React Bits Dock Style) -->
-  <header id="site-header">
-    <nav class="dock-container" aria-label="Main Navigation">
-      <a href="#hero" class="dock-brand magnet" aria-label="Home">
-        <span class="brand-monogram">PJ</span>
-        <span class="status-indicator" title="Available for hire"></span>
-      </a>
-
-      <div class="dock-nav-links">
-        <a href="#loop" class="dock-link magnet" data-section="loop">Self-Healing</a>
-        <a href="#metrics" class="dock-link magnet" data-section="metrics">Metrics</a>
-        <a href="#projects" class="dock-link magnet" data-section="projects">Projects</a>
-        <a href="#code" class="dock-link magnet" data-section="code">System</a>
-        <a href="#stack" class="dock-link magnet" data-section="stack">Stack</a>
-        <a href="#about" class="dock-link magnet" data-section="about">About</a>
-      </div>
-
-      <div class="dock-actions">
-        <a href="https://github.com/pranavshree-ai/pranavshree-ai" target="_blank" rel="noopener noreferrer" class="dock-icon-btn magnet" aria-label="GitHub Profile">
-          <i data-lucide="github"></i>
-        </a>
-        <a href="https://huggingface.co/shreecloud" target="_blank" rel="noopener noreferrer" class="dock-icon-btn magnet" aria-label="Hugging Face Profile">
-          <span class="hf-emoji">🤗</span>
-        </a>
-        <a href="https://www.linkedin.com/in/pranav-jadhav-mlops" target="_blank" rel="noopener noreferrer" class="dock-icon-btn magnet" aria-label="LinkedIn Profile">
-          <i data-lucide="linkedin"></i>
-        </a>
-        <a href="mailto:pranav.shree96@gmail.com" class="dock-cta-btn magnet" aria-label="Email Pranav">
-          <span>Connect</span>
-          <i data-lucide="arrow-up-right"></i>
+  <!-- TOP EDITORIAL HEADER BAR -->
+  <header id="top-bar">
+    <div class="top-bar-inner">
+      <div class="bar-left">
+        <a href="#hero" class="brand-monogram magnet">
+          <span class="mono-symbol">PJ</span>
+          <span class="brand-role">· ML ENGINEER</span>
         </a>
       </div>
-    </nav>
+      
+      <div class="bar-center">
+        <div class="availability-badge">
+          <span class="pulse-emerald"></span>
+          <span class="availability-text">AVAILABLE FOR FULL-TIME &amp; REMOTE ROLES</span>
+        </div>
+      </div>
+
+      <div class="bar-right">
+        <span class="location-tag">PUNE, INDIA (GMT+5:30)</span>
+      </div>
+    </div>
   </header>
 
-  <!-- Main Scrollable Canvas Wrapper (Driven by Lenis Smooth Scroll) -->
+  <!-- MAIN EDITORIAL CONTENT WRAPPER (Driven by Lenis) -->
   <main id="main-content">
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION: HAUTE DIGITAL CRAFTSMANSHIP -->
     <section id="hero" class="hero-section">
       <div class="container hero-container">
-        
-        <!-- Status & Badge Strip -->
-        <div class="hero-badge-strip" data-gsap="fade-up">
-          <div class="badge-pill shiny-badge">
-            <span class="pulse-dot"></span>
-            <span class="badge-text">LLMOps · MLOps · Generative AI</span>
-          </div>
-          <div class="status-pill">
-            <span class="status-dot"></span>
-            <span>Open to Full-time & Remote Roles</span>
-          </div>
+
+        <!-- System Pill -->
+        <div class="hero-tagline-wrap" data-gsap="fade-up">
+          <span class="sub-pill">
+            <span class="pill-dot"></span>
+            LLMOps · MLOps · Generative AI
+          </span>
+          <span class="sub-divider">/</span>
+          <span class="mono-meta">AUTONOMOUS FEEDBACK SYSTEMS</span>
         </div>
 
-        <!-- Hero Headline with Decrypted Text Effect -->
+        <!-- Editorial Serif Title -->
         <h1 class="hero-title" data-gsap="fade-up">
           I build ML systems that <br>
-          <span class="gradient-text decrypted-title" data-text="measure and fix themselves.">measure and fix themselves.</span>
+          <em>measure</em> &amp; <span class="shimmer-text decrypted-title" data-text="fix themselves.">fix themselves.</span>
         </h1>
 
-        <!-- Hero Subheadline -->
-        <p class="hero-subtitle" data-gsap="fade-up">
-          From PyTorch training and Hugging Face LoRA fine-tuning to vLLM serving with sub-50ms p50 latency.
-          Specialized in autonomous model observability, drift detection, and production-scale RAG.
+        <!-- Refined Editorial Subhead -->
+        <p class="hero-lead" data-gsap="fade-up">
+          Engineering the full lifecycle from PyTorch training and transformer fine-tuning with Hugging Face PEFT/LoRA,
+          to closed-loop drift evaluation and vLLM serving with sub-50ms p50 latency.
         </p>
 
-        <!-- CTA Buttons with Magnetic Physics -->
-        <div class="hero-cta-group" data-gsap="fade-up">
-          <a href="#loop" class="btn btn-primary magnet">
-            <span>Explore Self-Healing Loop</span>
-            <i data-lucide="play-circle"></i>
+        <!-- Primary Actions with Magnetic Physics -->
+        <div class="hero-actions-row" data-gsap="fade-up">
+          <a href="#loop" class="btn btn-ice magnet">
+            <span>Explore Architecture</span>
+            <i data-lucide="arrow-down-right"></i>
           </a>
-          <a href="#projects" class="btn btn-secondary magnet">
-            <span>Selected Projects</span>
-            <i data-lucide="folder-git-2"></i>
+          <a href="#projects" class="btn btn-outline magnet">
+            <span>Selected Work</span>
+            <span class="btn-count">04</span>
           </a>
           <a href="mailto:pranav.shree96@gmail.com" class="btn btn-ghost magnet">
             <i data-lucide="mail"></i>
-            <span>pranav.shree96@gmail.com</span>
+            <span>Get in Touch</span>
           </a>
         </div>
 
-        <!-- Quick Telemetry Chips (React Bits variable proximity feel) -->
-        <div class="hero-telemetry-grid" data-gsap="fade-up">
-          <div class="telemetry-chip spotlight-card">
-            <span class="telemetry-label">INFERENCE P50</span>
-            <span class="telemetry-val">&lt; 50 ms</span>
+        <!-- Telemetry Summary Grid (Spotlight Cards) -->
+        <div class="telemetry-bar" data-gsap="fade-up">
+          <div class="telemetry-item spotlight-card">
+            <div class="tele-meta">INFERENCE P50</div>
+            <div class="tele-num">&lt; 50 ms</div>
+            <div class="tele-sub">42ms on SST-2 via ONNX INT8</div>
           </div>
-          <div class="telemetry-chip spotlight-card">
-            <span class="telemetry-label">INDEX CAPACITY</span>
-            <span class="telemetry-val">1,037,086 vectors</span>
+          <div class="telemetry-item spotlight-card">
+            <div class="tele-meta">VECTOR CAPACITY</div>
+            <div class="tele-num">1,037,086</div>
+            <div class="tele-sub">Vectors in 1 Qdrant container</div>
           </div>
-          <div class="telemetry-chip spotlight-card">
-            <span class="telemetry-label">AI JUDGE AGREEMENT</span>
-            <span class="telemetry-val">94.0%</span>
+          <div class="telemetry-item spotlight-card">
+            <div class="tele-meta">AI JUDGE AGREEMENT</div>
+            <div class="tele-num">94.0%</div>
+            <div class="tele-sub">Dual Phi-3 &amp; Claude judges</div>
           </div>
-          <div class="telemetry-chip spotlight-card">
-            <span class="telemetry-label">HUMAN RE-DEPLOY STEPS</span>
-            <span class="telemetry-val">0 (Autonomous)</span>
+          <div class="telemetry-item spotlight-card">
+            <div class="tele-meta">HUMAN STEPS</div>
+            <div class="tele-num">0</div>
+            <div class="tele-sub">Autonomous drift-to-deploy loop</div>
           </div>
         </div>
 
-        <!-- Scroll Down Cue -->
-        <a href="#loop" class="scroll-cue" aria-label="Scroll down">
-          <span class="mouse-icon">
-            <span class="wheel"></span>
-          </span>
-          <span class="scroll-text">Scroll to explore 3D architecture</span>
-        </a>
       </div>
     </section>
 
-    <!-- SECTION 2: THE SELF-HEALING ARCHITECTURE SIMULATOR -->
-    <section id="loop" class="section-padding loop-section">
+    <!-- SECTION 2: THE SELF-HEALING ARCHITECTURE -->
+    <section id="loop" class="section-wrap loop-section">
       <div class="container">
         
-        <div class="section-header text-center" data-gsap="fade-up">
-          <div class="section-tag">
-            <i data-lucide="cpu"></i>
-            <span>AUTONOMOUS FEEDBACK LOOP</span>
+        <div class="section-head" data-gsap="fade-up">
+          <div class="editorial-tag">
+            <span class="tag-index">01</span>
+            <span class="tag-line"></span>
+            <span class="tag-title">AUTONOMOUS FEEDBACK LOOP</span>
           </div>
-          <h2 class="section-title">A Model That Notices It Is Getting Worse</h2>
-          <p class="section-description">
-            Production models degrade silently without observability. This 4-stage closed loop continuously validates quality, isolates drift, fine-tunes specialized adapters, and hot-swaps live inference without human intervention.
+          <h2 class="editorial-title">A model that notices it is getting worse.</h2>
+          <p class="editorial-sub">
+            In production, silent degradation erodes confidence. This four-stage closed-loop architecture continuously measures response fidelity, detects statistical distribution drift, triggers containerized LoRA retraining, and hot-swaps live serving without downtime.
           </p>
         </div>
 
-        <!-- Interactive Loop Visualizer Card -->
-        <div class="loop-visualizer-card spotlight-card" data-gsap="fade-up">
+        <!-- Interactive Architecture Simulator Card -->
+        <div class="architecture-visualizer spotlight-card" data-gsap="fade-up">
           
-          <!-- Simulation Control Bar -->
-          <div class="sim-bar">
-            <div class="sim-status">
-              <span class="sim-indicator" id="sim-indicator"></span>
-              <span class="sim-label" id="sim-status-text">Pipeline Status: Active Observation</span>
+          <div class="visualizer-header">
+            <div class="sys-status">
+              <span class="status-indicator" id="sim-indicator"></span>
+              <span class="mono-label" id="sim-status-text">SYSTEM STATUS: OBSERVATION ACTIVE</span>
             </div>
-            <div class="sim-actions">
-              <button id="trigger-sim-btn" class="btn btn-sm btn-primary magnet">
-                <i data-lucide="activity"></i>
-                <span>Simulate Drift & Auto-Fix</span>
-              </button>
-            </div>
+            <button id="trigger-sim-btn" class="btn-sim magnet">
+              <i data-lucide="play-circle"></i>
+              <span>Simulate Drift &amp; Auto-Fix</span>
+            </button>
           </div>
 
-          <!-- 4 Step Pipeline Grid -->
-          <div class="pipeline-grid">
+          <!-- 4 Stage Grid -->
+          <div class="nodes-grid">
             
-            <!-- Step 1 -->
-            <div class="step-card spotlight-card" id="step-node-1" data-step="1">
-              <div class="step-badge">01 // EVALUATE</div>
-              <div class="step-icon-wrap">
-                <i data-lucide="shield-check"></i>
-              </div>
-              <h3 class="step-name">Dual AI Judges</h3>
-              <p class="step-desc">
-                Phi-3 and Claude API score incoming responses against structured Pydantic schemas. 94% inter-rater agreement across 500+ production calls.
+            <div class="node-box spotlight-card" id="step-node-1" data-step="1">
+              <div class="node-badge">STAGE 01</div>
+              <h3 class="node-title">Evaluate</h3>
+              <p class="node-desc">
+                Phi-3 and Claude dual judges score answers concurrently with Pydantic structured schemas. 94% inter-rater agreement across 500+ calls.
               </p>
-              <div class="step-metric-tag">Agreement: 94%</div>
+              <div class="node-footer">
+                <span class="footer-chip">Agreement: 94%</span>
+              </div>
             </div>
 
-            <!-- Connector 1 -->
-            <div class="pipeline-connector" id="connector-1">
-              <div class="connector-line">
-                <div class="connector-pulse"></div>
+            <div class="node-arrow" id="connector-1">
+              <div class="arrow-track">
+                <div class="arrow-pulse"></div>
               </div>
-              <i data-lucide="chevron-right" class="connector-arrow"></i>
+              <i data-lucide="arrow-right"></i>
             </div>
 
-            <!-- Step 2 -->
-            <div class="step-card spotlight-card" id="step-node-2" data-step="2">
-              <div class="step-badge">02 // DETECT DRIFT</div>
-              <div class="step-icon-wrap">
-                <i data-lucide="alert-triangle"></i>
-              </div>
-              <h3 class="step-name">Evidently AI Monitor</h3>
-              <p class="step-desc">
-                Statistical test suites calculate data and concept drift. If quality drops below the alert threshold, an automated retraining payload is dispatched.
+            <div class="node-box spotlight-card" id="step-node-2" data-step="2">
+              <div class="node-badge">STAGE 02</div>
+              <h3 class="node-title">Detect Drift</h3>
+              <p class="node-desc">
+                Evidently AI monitors embedding vectors and score distributions. Scores dipping below 0.85 alert threshold automatically dispatch retraining.
               </p>
-              <div class="step-metric-tag">Threshold: &lt; 0.85</div>
+              <div class="node-footer">
+                <span class="footer-chip">Threshold: &lt; 0.85</span>
+              </div>
             </div>
 
-            <!-- Connector 2 -->
-            <div class="pipeline-connector" id="connector-2">
-              <div class="connector-line">
-                <div class="connector-pulse"></div>
+            <div class="node-arrow" id="connector-2">
+              <div class="arrow-track">
+                <div class="arrow-pulse"></div>
               </div>
-              <i data-lucide="chevron-right" class="connector-arrow"></i>
+              <i data-lucide="arrow-right"></i>
             </div>
 
-            <!-- Step 3 -->
-            <div class="step-card spotlight-card" id="step-node-3" data-step="3">
-              <div class="step-badge">03 // FINE-TUNE</div>
-              <div class="step-icon-wrap">
-                <i data-lucide="git-merge"></i>
-              </div>
-              <h3 class="step-name">LoRA Training Job</h3>
-              <p class="step-desc">
-                Hugging Face PEFT / LoRA container triggers automatically on curated evaluation data. Newly calibrated adapter is trained and pushed directly to the Hub.
+            <div class="node-box spotlight-card" id="step-node-3" data-step="3">
+              <div class="node-badge">STAGE 03</div>
+              <h3 class="node-title">Fine-Tune</h3>
+              <p class="node-desc">
+                Containerized PEFT / LoRA fine-tuning job dispatches automatically on curated failure cases (r=16, α=32), pushing the new adapter to Hugging Face Hub.
               </p>
-              <div class="step-metric-tag">Rank: r=16, α=32</div>
+              <div class="node-footer">
+                <span class="footer-chip">PEFT / LoRA</span>
+              </div>
             </div>
 
-            <!-- Connector 3 -->
-            <div class="pipeline-connector" id="connector-3">
-              <div class="connector-line">
-                <div class="connector-pulse"></div>
+            <div class="node-arrow" id="connector-3">
+              <div class="arrow-track">
+                <div class="arrow-pulse"></div>
               </div>
-              <i data-lucide="chevron-right" class="connector-arrow"></i>
+              <i data-lucide="arrow-right"></i>
             </div>
 
-            <!-- Step 4 -->
-            <div class="step-card spotlight-card" id="step-node-4" data-step="4">
-              <div class="step-badge">04 // REDEPLOY</div>
-              <div class="step-icon-wrap">
-                <i data-lucide="zap"></i>
-              </div>
-              <h3 class="step-name">vLLM Hot-Swap</h3>
-              <p class="step-desc">
-                The inference engine hot-swaps active LoRA weights in real-time. Zero downtime, zero human intervention, maintaining sub-50ms p50 latency.
+            <div class="node-box spotlight-card" id="step-node-4" data-step="4">
+              <div class="node-badge">STAGE 04</div>
+              <h3 class="node-title">Redeploy</h3>
+              <p class="node-desc">
+                vLLM serving hot-swaps active adapter weights in real-time. Zero dropped requests, zero human steps, maintaining sub-50ms p50 latency.
               </p>
-              <div class="step-metric-tag">Latency p50: 42ms</div>
+              <div class="node-footer">
+                <span class="footer-chip">vLLM Hot-Swap</span>
+              </div>
             </div>
 
           </div>
 
-          <!-- Live Telemetry Terminal output -->
-          <div class="sim-terminal">
-            <div class="terminal-bar">
-              <span class="term-dot red"></span>
-              <span class="term-dot yellow"></span>
-              <span class="term-dot green"></span>
-              <span class="term-title">pipeline-telemetry.log</span>
+          <!-- Execution Console -->
+          <div class="sys-console">
+            <div class="console-top">
+              <div class="dots-wrap">
+                <span class="dot d-red"></span>
+                <span class="dot d-yellow"></span>
+                <span class="dot d-green"></span>
+              </div>
+              <span class="console-filename">observability_telemetry.log</span>
             </div>
-            <div class="terminal-body" id="sim-log-output">
-              <div class="log-line info">[10:19:42] SYSTEM INIT: Observability cluster listening on port 8000.</div>
-              <div class="log-line success">[10:20:15] DUAL-JUDGE: Phi-3 (0.93) + Claude-3.5 (0.95) -> Agreement: 94.2%.</div>
-              <div class="log-line info">[10:20:44] EVIDENTLY: Embedding drift score = 0.04 (within healthy bound).</div>
-              <div class="log-line muted">[Ready] Click "Simulate Drift & Auto-Fix" above to trace a self-healing trigger cycle.</div>
+            <div class="console-stream" id="sim-log-output">
+              <div class="log-row info">[10:19:42] SYSTEM INIT: Closed-loop evaluator listening on production inference stream.</div>
+              <div class="log-row success">[10:20:15] DUAL-JUDGE: Phi-3 (0.93) + Claude-3.5 (0.95) -> Agreement: 94.2%.</div>
+              <div class="log-row info">[10:20:44] EVIDENTLY: Concept drift score = 0.04 (healthy parameter space).</div>
+              <div class="log-row muted">[Ready] Click "Simulate Drift &amp; Auto-Fix" above to trace autonomous healing.</div>
             </div>
           </div>
 
@@ -276,85 +249,67 @@
       </div>
     </section>
 
-    <!-- SECTION 3: KEY METRICS (Interactive GSAP Counters) -->
-    <section id="metrics" class="section-padding metrics-section">
+    <!-- SECTION 3: METRICS (Haute Editorial Counters) -->
+    <section id="metrics" class="section-wrap metrics-section">
       <div class="container">
         
-        <div class="section-header text-center" data-gsap="fade-up">
-          <div class="section-tag">
-            <i data-lucide="bar-chart-3"></i>
-            <span>PROVEN IN PRODUCTION</span>
+        <div class="section-head" data-gsap="fade-up">
+          <div class="editorial-tag">
+            <span class="tag-index">02</span>
+            <span class="tag-line"></span>
+            <span class="tag-title">PROVEN IN PRODUCTION</span>
           </div>
-          <h2 class="section-title">Engineered For Performance & Scale</h2>
-          <p class="section-description">
-            Quantifiable benchmarks from production deployments across vector search, evaluation agreement, and latency budgets.
-          </p>
+          <h2 class="editorial-title">Scale, speed, and mathematical rigor.</h2>
         </div>
 
-        <div class="metrics-grid">
+        <div class="metrics-editorial-grid">
           
-          <!-- Metric 1 -->
-          <div class="metric-card spotlight-card" data-gsap="fade-up">
-            <div class="metric-header">
+          <div class="metric-block spotlight-card" data-gsap="fade-up">
+            <div class="num-wrapper">
               <span class="metric-counter" data-target="1037086">0</span>
-              <span class="metric-suffix">+</span>
+              <span class="metric-unit">+</span>
             </div>
-            <h3 class="metric-title">Vectors in Single Container</h3>
-            <p class="metric-desc">
-              Indexed in Qdrant with hybrid BM25 + dense search for GRGPT, delivering contextual answers in 2–3s over 100K+ PDFs.
+            <h3 class="m-title">Vectors in 1 Container</h3>
+            <p class="m-desc">
+              Indexed in Qdrant with hybrid BM25 + dense search for GRGPT, querying 100K+ PDFs in 2 to 3 seconds.
             </p>
-            <div class="metric-meta">
-              <i data-lucide="database"></i>
-              <span>Qdrant · HNSW · Cosine</span>
-            </div>
+            <div class="m-tag">Qdrant · HNSW Cosine</div>
           </div>
 
-          <!-- Metric 2 -->
-          <div class="metric-card spotlight-card" data-gsap="fade-up">
-            <div class="metric-header">
+          <div class="metric-block spotlight-card" data-gsap="fade-up">
+            <div class="num-wrapper">
               <span class="metric-counter" data-target="94">0</span>
-              <span class="metric-suffix">%</span>
+              <span class="metric-unit">%</span>
             </div>
-            <h3 class="metric-title">AI Judge Agreement</h3>
-            <p class="metric-desc">
-              Inter-rater consistency between dual judges (Phi-3 & Claude) with zero schema violations over 500+ production calls.
+            <h3 class="m-title">AI Judge Agreement</h3>
+            <p class="m-desc">
+              Inter-rater consistency between dual judges (Phi-3 &amp; Claude) across 500+ production calls.
             </p>
-            <div class="metric-meta">
-              <i data-lucide="check-circle-2"></i>
-              <span>Pydantic Schema Guardrails</span>
-            </div>
+            <div class="m-tag">Pydantic Schemas</div>
           </div>
 
-          <!-- Metric 3 -->
-          <div class="metric-card spotlight-card" data-gsap="fade-up">
-            <div class="metric-header">
+          <div class="metric-block spotlight-card" data-gsap="fade-up">
+            <div class="num-wrapper">
               <span class="metric-counter" data-target="42">0</span>
-              <span class="metric-suffix">ms</span>
+              <span class="metric-unit">ms</span>
             </div>
-            <h3 class="metric-title">Inference P50 Latency</h3>
-            <p class="metric-desc">
-              Achieved 1.8x lower latency and ~40% lower VRAM via ONNX INT8 quantization and vLLM kernel optimization.
+            <h3 class="m-title">Inference P50 Latency</h3>
+            <p class="m-desc">
+              1.8× lower latency and ~40% lower VRAM via ONNX INT8 and vLLM kernel optimization.
             </p>
-            <div class="metric-meta">
-              <i data-lucide="zap"></i>
-              <span>ONNX INT8 · TensorRT</span>
-            </div>
+            <div class="m-tag">ONNX INT8 · vLLM</div>
           </div>
 
-          <!-- Metric 4 -->
-          <div class="metric-card spotlight-card" data-gsap="fade-up">
-            <div class="metric-header">
+          <div class="metric-block spotlight-card" data-gsap="fade-up">
+            <div class="num-wrapper">
               <span class="metric-counter" data-target="0">0</span>
-              <span class="metric-suffix">Steps</span>
+              <span class="metric-unit">Steps</span>
             </div>
-            <h3 class="metric-title">Human Intervention</h3>
-            <p class="metric-desc">
-              Fully autonomous retraining & hot-swap deployment loop triggered dynamically upon drift detection.
+            <h3 class="m-title">Human Intervention</h3>
+            <p class="m-desc">
+              Autonomous retraining &amp; hot-swap deployment loop triggered upon drift detection.
             </p>
-            <div class="metric-meta">
-              <i data-lucide="refresh-cw"></i>
-              <span>Closed-Loop Automation</span>
-            </div>
+            <div class="m-tag">Autonomous Loop</div>
           </div>
 
         </div>
@@ -362,218 +317,201 @@
       </div>
     </section>
 
-    <!-- SECTION 4: SELECTED PROJECTS (Bento Grid with 3D Tilt) -->
-    <section id="projects" class="section-padding projects-section">
+    <!-- SECTION 4: SELECTED PRODUCTION SYSTEMS (Yaros Editorial Bento) -->
+    <section id="projects" class="section-wrap projects-section">
       <div class="container">
         
-        <div class="section-header" data-gsap="fade-up">
-          <div class="section-header-row">
-            <div>
-              <div class="section-tag">
-                <i data-lucide="folder-git"></i>
-                <span>SYSTEMS, NOT JUST NOTEBOOKS</span>
-              </div>
-              <h2 class="section-title">Selected Production Systems</h2>
+        <div class="section-head-split" data-gsap="fade-up">
+          <div>
+            <div class="editorial-tag">
+              <span class="tag-index">03</span>
+              <span class="tag-line"></span>
+              <span class="tag-title">SELECTED WORK</span>
             </div>
-            <div class="project-filter-pills" id="project-filters">
-              <button class="filter-pill active" data-filter="all">All</button>
-              <button class="filter-pill" data-filter="rag">RAG & LLMs</button>
-              <button class="filter-pill" data-filter="mlops">MLOps & Serving</button>
-              <button class="filter-pill" data-filter="cv">Deep Learning</button>
-            </div>
+            <h2 class="editorial-title">Systems, not notebooks.</h2>
+          </div>
+          
+          <div class="filter-strip" id="project-filters">
+            <button class="filter-tab active" data-filter="all">All</button>
+            <button class="filter-tab" data-filter="rag">RAG &amp; LLMs</button>
+            <button class="filter-tab" data-filter="mlops">MLOps &amp; Serving</button>
+            <button class="filter-tab" data-filter="cv">Deep Learning</button>
           </div>
         </div>
 
-        <div class="projects-bento-grid" id="projects-grid">
+        <div class="projects-editorial-grid" id="projects-grid">
           
-          <!-- Flagship Project 1: GRGPT -->
-          <article class="project-card flagship-card spotlight-card" data-category="rag" data-gsap="fade-up">
-            <div class="project-inner">
-              <div class="project-badge-row">
-                <span class="badge-accent">Flagship System</span>
-                <span class="badge-role">Team Lead & Architect</span>
+          <!-- Case 1: GRGPT -->
+          <article class="project-hero-card spotlight-card" data-category="rag" data-gsap="fade-up">
+            <div class="card-inner">
+              <div class="meta-row">
+                <span class="badge-pill-ice">FLAGSHIP PRODUCTION SYSTEM</span>
+                <span class="badge-role">Lead Engineer &amp; Architect · Fourise</span>
               </div>
-              <h3 class="project-title">
-                <span>GRGPT: Maharashtra GR & Tender Assistant</span>
-                <i data-lucide="external-link"></i>
-              </h3>
-              <p class="project-lead">
-                Finding the right Maharashtra Government Resolution or tender meant slow, manual PDF search. I led the engineering team building a domain-restricted ChatGPT-style assistant grounded in verified government documents.
-              </p>
               
-              <div class="project-highlights">
-                <div class="highlight-item">
-                  <span class="highlight-num">1,037,086</span>
-                  <span class="highlight-label">Vectors from 100K+ PDFs in 1 Qdrant container</span>
-                </div>
-                <div class="highlight-item">
-                  <span class="highlight-num">2 to 3 s</span>
-                  <span class="highlight-label">Retrieval time to highly relevant context</span>
-                </div>
-                <div class="highlight-item">
-                  <span class="highlight-num">100%</span>
-                  <span class="highlight-label">Domain-grounded answers without hallucination</span>
-                </div>
-              </div>
-
-              <div class="project-tech-tags">
-                <span class="tech-tag">Qdrant</span>
-                <span class="tech-tag">RAG Pipeline</span>
-                <span class="tech-tag">Sentence-BERT</span>
-                <span class="tech-tag">Hybrid Search</span>
-                <span class="tech-tag">Docker</span>
-                <span class="tech-tag">FastAPI</span>
-                <span class="tech-tag">Verification Logic</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Flagship Project 2: LLM-Eval -->
-          <article class="project-card flagship-card spotlight-card" data-category="mlops" data-gsap="fade-up">
-            <div class="project-inner">
-              <div class="project-badge-row">
-                <span class="badge-accent">Autonomous Observability</span>
-                <span class="badge-role">Creator</span>
-              </div>
-              <h3 class="project-title">
-                <span>LLM-Eval: Dual AI-Judge Platform</span>
-                <i data-lucide="external-link"></i>
-              </h3>
-              <p class="project-lead">
-                LLM quality drifts in production and manual checks do not scale. Designed a dual-judge pipeline (Phi-3 + Claude API) with Pydantic structured scoring, Evidently AI drift monitoring, and an autonomous LoRA retraining trigger.
-              </p>
+              <h3 class="p-title">GRGPT: Maharashtra GR &amp; Tender Assistant</h3>
               
-              <div class="project-highlights">
-                <div class="highlight-item">
-                  <span class="highlight-num">94%</span>
-                  <span class="highlight-label">Inter-rater agreement between judges</span>
-                </div>
-                <div class="highlight-item">
-                  <span class="highlight-num">1.8x</span>
-                  <span class="highlight-label">Lower latency through INT8 optimization</span>
-                </div>
-                <div class="highlight-item">
-                  <span class="highlight-num">0</span>
-                  <span class="highlight-label">Human steps to auto fine-tune and redeploy</span>
-                </div>
-              </div>
-
-              <div class="project-tech-tags">
-                <span class="tech-tag">vLLM</span>
-                <span class="tech-tag">FastAPI</span>
-                <span class="tech-tag">Phi-3</span>
-                <span class="tech-tag">Claude 3.5</span>
-                <span class="tech-tag">Evidently AI</span>
-                <span class="tech-tag">MLflow</span>
-                <span class="tech-tag">PEFT LoRA</span>
-                <span class="tech-tag">Docker Compose</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 3: DistilBERT MLOps Platform -->
-          <article class="project-card standard-card spotlight-card" data-category="mlops" data-gsap="fade-up">
-            <div class="project-inner">
-              <div class="project-badge-row">
-                <span class="badge-pill-cyan">Production Serving</span>
-              </div>
-              <h3 class="project-title">
-                <span>DistilBERT & MLOps Platform</span>
-                <i data-lucide="external-link"></i>
-              </h3>
-              <p class="project-lead">
-                8-service Docker Compose infrastructure taking a fine-tuned transformer to production: Feast & Redis feature store, Nginx canary routing (90/10 with shadow traffic), and ONNX INT8 serving.
+              <p class="p-summary">
+                Finding the right government resolution or tender meant slow, manual PDF search across thousands of unindexed documents. Led the engineering team to build a ChatGPT-style assistant restricted to government documents, ensuring 100% factual fidelity.
               </p>
-              <div class="project-metric-row">
-                <span class="pill-metric">92.4% SST-2</span>
-                <span class="pill-metric">42ms p50</span>
-                <span class="pill-metric">$3K/mo saved</span>
+
+              <div class="impact-metrics-row">
+                <div class="impact-cell">
+                  <span class="impact-num">1,037,086</span>
+                  <span class="impact-lbl">Vectors in 1 Qdrant container</span>
+                </div>
+                <div class="impact-cell">
+                  <span class="impact-num">2 to 3 s</span>
+                  <span class="impact-lbl">Retrieval time across 100K+ PDFs</span>
+                </div>
+                <div class="impact-cell">
+                  <span class="impact-num">Correct</span>
+                  <span class="impact-lbl">Grounded answers without hallucination</span>
+                </div>
               </div>
-              <div class="project-tech-tags">
-                <span class="tech-tag">PyTorch Lightning</span>
-                <span class="tech-tag">Feast</span>
-                <span class="tech-tag">Redis</span>
-                <span class="tech-tag">Nginx Canary</span>
-                <span class="tech-tag">ONNX INT8</span>
+
+              <div class="tech-pills-wrap">
+                <span class="p-chip">Qdrant</span>
+                <span class="p-chip">RAG Pipeline</span>
+                <span class="p-chip">Sentence-BERT</span>
+                <span class="p-chip">Hybrid BM25</span>
+                <span class="p-chip">FastAPI</span>
+                <span class="p-chip">Docker</span>
               </div>
             </div>
           </article>
 
-          <!-- Project 4: RAG Document Q&A -->
-          <article class="project-card standard-card spotlight-card" data-category="rag" data-gsap="fade-up">
-            <div class="project-inner">
-              <div class="project-badge-row">
-                <span class="badge-pill-cyan">Hybrid Search</span>
+          <!-- Case 2: LLM-Eval -->
+          <article class="project-hero-card spotlight-card" data-category="mlops" data-gsap="fade-up">
+            <div class="card-inner">
+              <div class="meta-row">
+                <span class="badge-pill-amber">AUTONOMOUS OBSERVABILITY</span>
+                <span class="badge-role">Creator &amp; Architect</span>
               </div>
-              <h3 class="project-title">
-                <span>RAG Document Q&A Assistant</span>
-                <i data-lucide="external-link"></i>
-              </h3>
-              <p class="project-lead">
+              
+              <h3 class="p-title">LLM-Eval: Dual AI-Judge Observability Platform</h3>
+              
+              <p class="p-summary">
+                LLM quality drifts silently in production. Designed a dual-judge pipeline (Phi-3 + Claude API) with Pydantic structured scoring, Evidently AI drift monitoring, and an autonomous LoRA retraining trigger with vLLM serving hot-swap.
+              </p>
+
+              <div class="impact-metrics-row">
+                <div class="impact-cell">
+                  <span class="impact-num">94.0%</span>
+                  <span class="impact-lbl">AI-judge inter-rater agreement</span>
+                </div>
+                <div class="impact-cell">
+                  <span class="impact-num">1.8×</span>
+                  <span class="impact-lbl">Lower latency via INT8 quantization</span>
+                </div>
+                <div class="impact-cell">
+                  <span class="impact-num">0 Steps</span>
+                  <span class="impact-lbl">Human intervention from drift to deploy</span>
+                </div>
+              </div>
+
+              <div class="tech-pills-wrap">
+                <span class="p-chip">vLLM</span>
+                <span class="p-chip">FastAPI</span>
+                <span class="p-chip">Phi-3</span>
+                <span class="p-chip">Claude 3.5</span>
+                <span class="p-chip">Evidently AI</span>
+                <span class="p-chip">MLflow</span>
+                <span class="p-chip">PEFT/LoRA</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case 3: DistilBERT MLOps -->
+          <article class="project-sub-card spotlight-card" data-category="mlops" data-gsap="fade-up">
+            <div class="card-inner">
+              <div class="meta-row">
+                <span class="mono-tag">PRODUCTION SERVING</span>
+              </div>
+              <h3 class="p-title-sm">DistilBERT &amp; Advanced MLOps Platform</h3>
+              <p class="p-summary-sm">
+                8-service Docker Compose infrastructure taking a fine-tuned transformer to production: Feast + Redis feature store, Nginx canary (90/10 + shadow traffic), and ONNX INT8 serving.
+              </p>
+              <div class="stats-mini-row">
+                <span class="mini-stat">92.4% SST-2</span>
+                <span class="mini-stat">42ms p50</span>
+                <span class="mini-stat">$3K/mo saved</span>
+              </div>
+              <div class="tech-pills-wrap">
+                <span class="p-chip">PyTorch Lightning</span>
+                <span class="p-chip">Feast</span>
+                <span class="p-chip">Redis</span>
+                <span class="p-chip">Nginx Canary</span>
+                <span class="p-chip">ONNX</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case 4: RAG Document Q&A -->
+          <article class="project-sub-card spotlight-card" data-category="rag" data-gsap="fade-up">
+            <div class="card-inner">
+              <div class="meta-row">
+                <span class="mono-tag">HYBRID RETRIEVAL</span>
+              </div>
+              <h3 class="p-title-sm">RAG Document Q&amp;A Assistant</h3>
+              <p class="p-summary-sm">
                 Grounded, citable answers from dense PDF/text collections: Sentence-BERT embeddings, FAISS plus BM25 hybrid reranking, and Claude 3.5 Sonnet streamed over Server-Sent Events.
               </p>
-              <div class="project-metric-row">
-                <span class="pill-metric">&lt; 200ms E2E</span>
-                <span class="pill-metric">Chunk Citations</span>
+              <div class="stats-mini-row">
+                <span class="mini-stat">&lt; 200ms E2E</span>
+                <span class="mini-stat">Chunk Citations</span>
               </div>
-              <div class="project-tech-tags">
-                <span class="tech-tag">LangChain</span>
-                <span class="tech-tag">Claude 3.5 Sonnet</span>
-                <span class="tech-tag">FAISS</span>
-                <span class="tech-tag">BM25</span>
-                <span class="tech-tag">FastAPI SSE</span>
+              <div class="tech-pills-wrap">
+                <span class="p-chip">LangChain</span>
+                <span class="p-chip">Claude 3.5</span>
+                <span class="p-chip">FAISS</span>
+                <span class="p-chip">BM25</span>
+                <span class="p-chip">FastAPI SSE</span>
               </div>
             </div>
           </article>
 
-          <!-- Project 5: Deep Learning & LoRA Systems -->
-          <article class="project-card standard-card spotlight-card" data-category="cv" data-gsap="fade-up">
-            <div class="project-inner">
-              <div class="project-badge-row">
-                <span class="badge-pill-cyan">Deep Learning & Fine-Tuning</span>
+          <!-- Case 5: Deep Learning -->
+          <article class="project-sub-card spotlight-card" data-category="cv" data-gsap="fade-up">
+            <div class="card-inner">
+              <div class="meta-row">
+                <span class="mono-tag">DEEP LEARNING</span>
               </div>
-              <h3 class="project-title">
-                <span>ResNet-18 & Llama-3-8B LoRA</span>
-                <i data-lucide="external-link"></i>
-              </h3>
-              <p class="project-lead">
-                CNN classifier with ResNet-18 hitting 93.7% accuracy on CIFAR-10. Fine-tuned Llama-3-8B with DeepSpeed ZeRO-2 reducing peak VRAM by ~40% for cost-effective cloud GPU training.
+              <h3 class="p-title-sm">ResNet-18 &amp; Llama-3-8B LoRA</h3>
+              <p class="p-summary-sm">
+                CNN classifier with ResNet-18 achieving 93.7% accuracy on CIFAR-10. Fine-tuned Llama-3-8B with DeepSpeed ZeRO-2 reducing peak VRAM by ~40% for cloud GPU efficiency.
               </p>
-              <div class="project-metric-row">
-                <span class="pill-metric">93.7% CIFAR-10</span>
-                <span class="pill-metric">~40% VRAM Reduction</span>
+              <div class="stats-mini-row">
+                <span class="mini-stat">93.7% CIFAR-10</span>
+                <span class="mini-stat">~40% Less VRAM</span>
               </div>
-              <div class="project-tech-tags">
-                <span class="tech-tag">PyTorch</span>
-                <span class="tech-tag">DeepSpeed ZeRO-2</span>
-                <span class="tech-tag">Llama-3</span>
-                <span class="tech-tag">ResNet-18</span>
+              <div class="tech-pills-wrap">
+                <span class="p-chip">PyTorch</span>
+                <span class="p-chip">DeepSpeed ZeRO-2</span>
+                <span class="p-chip">Llama-3</span>
+                <span class="p-chip">ResNet-18</span>
               </div>
             </div>
           </article>
 
-          <!-- Project 6: Multi-Agent Content Suite -->
-          <article class="project-card standard-card spotlight-card" data-category="rag" data-gsap="fade-up">
-            <div class="project-inner">
-              <div class="project-badge-row">
-                <span class="badge-pill-cyan">Agentic AI</span>
+          <!-- Case 6: Multi-Agent Suite -->
+          <article class="project-sub-card spotlight-card" data-category="rag" data-gsap="fade-up">
+            <div class="card-inner">
+              <div class="meta-row">
+                <span class="mono-tag">AGENTIC WORKFLOWS</span>
               </div>
-              <h3 class="project-title">
-                <span>Multi-Agent Content Suite</span>
-                <i data-lucide="external-link"></i>
-              </h3>
-              <p class="project-lead">
+              <h3 class="p-title-sm">Multi-Agent Content Suite</h3>
+              <p class="p-summary-sm">
                 Orchestrated cooperative multi-agent workflows for automated technical research, fact synthesis, cross-verification, and structured markdown publication.
               </p>
-              <div class="project-metric-row">
-                <span class="pill-metric">Autonomous Verification</span>
-                <span class="pill-metric">Multi-Agent</span>
+              <div class="stats-mini-row">
+                <span class="mini-stat">Autonomous Verification</span>
+                <span class="mini-stat">Multi-Agent</span>
               </div>
-              <div class="project-tech-tags">
-                <span class="tech-tag">LangGraph</span>
-                <span class="tech-tag">OpenAI API</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Pydantic</span>
+              <div class="tech-pills-wrap">
+                <span class="p-chip">LangGraph</span>
+                <span class="p-chip">OpenAI API</span>
+                <span class="p-chip">Pydantic</span>
               </div>
             </div>
           </article>
@@ -583,74 +521,70 @@
       </div>
     </section>
 
-    <!-- SECTION 5: INTERACTIVE SYSTEM REPL / CLASS PRANAV -->
-    <section id="code" class="section-padding code-section">
+    <!-- SECTION 5: SYSTEM SPECIFICATION (CLASS PRANAV) -->
+    <section id="system" class="section-wrap code-section">
       <div class="container">
         
-        <div class="section-header text-center" data-gsap="fade-up">
-          <div class="section-tag">
-            <i data-lucide="terminal"></i>
-            <span>SYSTEM ARCHITECTURE BLUEPRINT</span>
+        <div class="section-head" data-gsap="fade-up">
+          <div class="editorial-tag">
+            <span class="tag-index">04</span>
+            <span class="tag-line"></span>
+            <span class="tag-title">SYSTEM SPECIFICATION</span>
           </div>
-          <h2 class="section-title">The Pranav Jadhav Object Definition</h2>
-          <p class="section-description">
+          <h2 class="editorial-title">The Pranav Jadhav Object Definition.</h2>
+          <p class="editorial-sub">
             Executable specification of engineering priorities, active research vectors, and deployment principles.
           </p>
         </div>
 
-        <div class="terminal-wrapper spotlight-card" data-gsap="fade-up">
-          <div class="terminal-header">
-            <div class="terminal-controls">
-              <span class="control-dot red"></span>
-              <span class="control-dot yellow"></span>
-              <span class="control-dot green"></span>
+        <div class="atelier-terminal spotlight-card" data-gsap="fade-up">
+          <div class="terminal-bar">
+            <div class="bar-dots">
+              <span class="dot d-red"></span>
+              <span class="dot d-yellow"></span>
+              <span class="dot d-green"></span>
             </div>
-            <div class="terminal-title-text">
-              <i data-lucide="file-code-2"></i>
-              <span>pranav_engineer.py — python3.12</span>
-            </div>
-            <div class="terminal-actions">
-              <button id="copy-code-btn" class="term-btn magnet" aria-label="Copy Code">
+            <div class="bar-title">pranav_engineer.py — python3.12</div>
+            <div class="bar-btns">
+              <button id="copy-code-btn" class="terminal-btn magnet" aria-label="Copy Code">
                 <i data-lucide="copy"></i>
                 <span id="copy-btn-label">Copy</span>
               </button>
-              <button id="run-code-btn" class="term-btn btn-run magnet" aria-label="Run Code">
+              <button id="run-code-btn" class="terminal-btn btn-highlight magnet" aria-label="Run Code">
                 <i data-lucide="play"></i>
                 <span>Run System</span>
               </button>
             </div>
           </div>
 
-          <div class="terminal-code-body">
-            <pre><code class="language-python"><span class="token-keyword">class</span> <span class="token-class">Pranav</span>:
-    <span class="token-property">role</span> = <span class="token-string">"Machine Learning Engineer, LLMOps, MLOps, GenAI"</span>
-    <span class="token-property">location</span> = <span class="token-string">"Pune, India (Open to Worldwide Remote & Relocation)"</span>
+          <div class="terminal-code">
+            <pre><code class="language-python"><span class="token-kw">class</span> <span class="token-cls">Pranav</span>:
+    <span class="token-attr">role</span> = <span class="token-str">"Machine Learning Engineer, LLMOps, MLOps, GenAI"</span>
+    <span class="token-attr">location</span> = <span class="token-str">"Pune, India (Open to Worldwide Remote &amp; Relocation)"</span>
     
-    <span class="token-property">going_deep_on</span> = [
-        <span class="token-string">"LLM evaluation: AI-judge scoring, drift, hallucination checks"</span>,
-        <span class="token-string">"Closed-loop fine-tuning: drift alert -> LoRA -> redeploy"</span>,
-        <span class="token-string">"Inference optimisation: vLLM, ONNX INT8, 4-bit quantisation"</span>,
-        <span class="token-string">"RAG at scale: hybrid retrieval, 1M+ vector indexes"</span>,
+    <span class="token-attr">going_deep_on</span> = [
+        <span class="token-str">"LLM evaluation: AI-judge scoring, drift, hallucination checks"</span>,
+        <span class="token-str">"Closed-loop fine-tuning: drift alert -&gt; LoRA -&gt; redeploy"</span>,
+        <span class="token-str">"Inference optimisation: vLLM, ONNX INT8, 4-bit quantisation"</span>,
+        <span class="token-str">"RAG at scale: hybrid retrieval, 1M+ vector indexes"</span>,
     ]
 
-    <span class="token-property">open_to</span> = [<span class="token-string">"Full-time"</span>, <span class="token-string">"Internships"</span>, <span class="token-string">"Remote-first ML roles"</span>]
+    <span class="token-attr">open_to</span> = [<span class="token-str">"Full-time"</span>, <span class="token-str">"Internships"</span>, <span class="token-str">"Remote-first ML roles"</span>]
 
-    <span class="token-keyword">def</span> <span class="token-func">build_system</span>(<span class="token-param">self</span>):
-        <span class="token-keyword">return</span> {
-            <span class="token-string">"philosophy"</span>: <span class="token-string">"Correct, not just fluent"</span>,
-            <span class="token-string">"metrics"</span>: [<span class="token-string">"p50/p99 latency"</span>, <span class="token-string">"judge agreement"</span>, <span class="token-string">"VRAM footprint"</span>],
-            <span class="token-string">"uptime"</span>: <span class="token-number">99.99</span>,
-            <span class="token-string">"status"</span>: <span class="token-string">"READY_FOR_DEPLOYMENT"</span>
+    <span class="token-kw">def</span> <span class="token-fn">build_system</span>(<span class="token-arg">self</span>):
+        <span class="token-kw">return</span> {
+            <span class="token-str">"philosophy"</span>: <span class="token-str">"Correct, not just fluent"</span>,
+            <span class="token-str">"metrics"</span>: [<span class="token-str">"p50/p99 latency"</span>, <span class="token-str">"judge agreement"</span>, <span class="token-str">"VRAM footprint"</span>],
+            <span class="token-str">"uptime"</span>: <span class="token-num">99.99</span>,
+            <span class="token-str">"status"</span>: <span class="token-str">"READY_FOR_DEPLOYMENT"</span>
         }</code></pre>
           </div>
 
-          <!-- Live Output Console for Run button -->
-          <div class="terminal-console-pane" id="terminal-exec-pane">
-            <div class="console-header">
-              <span class="console-label">STDOUT EXECUTION TRACE:</span>
-            </div>
-            <div class="console-content" id="console-output">
-              <p class="console-hint">&gt; Press "Run System" above to execute Pranav().build_system() diagnostics.</p>
+          <!-- Execution Trace Pane -->
+          <div class="terminal-stdout">
+            <div class="stdout-label">STDOUT EXECUTION TRACE:</div>
+            <div class="stdout-stream" id="console-output">
+              <span class="stdout-hint">&gt; Click "Run System" above to execute Pranav().build_system() diagnostics.</span>
             </div>
           </div>
         </div>
@@ -658,107 +592,93 @@
       </div>
     </section>
 
-    <!-- SECTION 6: TECHNICAL TOOLKIT & STACK MATRIX -->
-    <section id="stack" class="section-padding stack-section">
+    <!-- SECTION 6: TECHNICAL MATRIX -->
+    <section id="stack" class="section-wrap stack-section">
       <div class="container">
         
-        <div class="section-header text-center" data-gsap="fade-up">
-          <div class="section-tag">
-            <i data-lucide="layers"></i>
-            <span>PRODUCTION TOOLKIT</span>
+        <div class="section-head" data-gsap="fade-up">
+          <div class="editorial-tag">
+            <span class="tag-index">05</span>
+            <span class="tag-line"></span>
+            <span class="tag-title">TECHNICAL MASTERY</span>
           </div>
-          <h2 class="section-title">Technologies Proven in Systems</h2>
-          <p class="section-description">
-            Selected frameworks and cloud tools battle-tested across training, evaluation, serving, and distributed storage.
-          </p>
+          <h2 class="editorial-title">Production Toolkit &amp; Frameworks.</h2>
         </div>
 
-        <div class="stack-categories-grid">
+        <div class="stack-editorial-grid">
           
-          <!-- Category 1: Machine Learning & Modeling -->
-          <div class="stack-category-card spotlight-card" data-gsap="fade-up">
-            <div class="category-header">
-              <div class="category-icon">
-                <i data-lucide="brain"></i>
-              </div>
-              <h3 class="category-name">Machine Learning</h3>
+          <div class="stack-box spotlight-card" data-gsap="fade-up">
+            <div class="box-head">
+              <i data-lucide="brain"></i>
+              <h3>Machine Learning</h3>
             </div>
-            <div class="skills-wrap">
-              <span class="skill-chip magnet">Python</span>
-              <span class="skill-chip magnet">PyTorch</span>
-              <span class="skill-chip magnet">PyTorch Lightning</span>
-              <span class="skill-chip magnet">scikit-learn</span>
-              <span class="skill-chip magnet">pandas</span>
-              <span class="skill-chip magnet">NumPy</span>
-              <span class="skill-chip magnet">Hugging Face</span>
-              <span class="skill-chip magnet">PEFT & LoRA</span>
-              <span class="skill-chip magnet">DeepSpeed ZeRO</span>
-              <span class="skill-chip magnet">XGBoost</span>
-              <span class="skill-chip magnet">LightGBM</span>
+            <div class="chips-flow">
+              <span class="chip magnet">Python</span>
+              <span class="chip magnet">PyTorch</span>
+              <span class="chip magnet">PyTorch Lightning</span>
+              <span class="chip magnet">scikit-learn</span>
+              <span class="chip magnet">pandas</span>
+              <span class="chip magnet">NumPy</span>
+              <span class="chip magnet">Hugging Face</span>
+              <span class="chip magnet">PEFT &amp; LoRA</span>
+              <span class="chip magnet">DeepSpeed ZeRO</span>
+              <span class="chip magnet">XGBoost</span>
+              <span class="chip magnet">LightGBM</span>
             </div>
           </div>
 
-          <!-- Category 2: LLMs & RAG -->
-          <div class="stack-category-card spotlight-card" data-gsap="fade-up">
-            <div class="category-header">
-              <div class="category-icon">
-                <i data-lucide="sparkles"></i>
-              </div>
-              <h3 class="category-name">LLMs & RAG</h3>
+          <div class="stack-box spotlight-card" data-gsap="fade-up">
+            <div class="box-head">
+              <i data-lucide="sparkles"></i>
+              <h3>LLMs &amp; RAG</h3>
             </div>
-            <div class="skills-wrap">
-              <span class="skill-chip magnet">LangChain</span>
-              <span class="skill-chip magnet">Claude 3.5 API</span>
-              <span class="skill-chip magnet">OpenAI API</span>
-              <span class="skill-chip magnet">Qdrant (1M+ vectors)</span>
-              <span class="skill-chip magnet">FAISS</span>
-              <span class="skill-chip magnet">BM25 Hybrid</span>
-              <span class="skill-chip magnet">vLLM</span>
-              <span class="skill-chip magnet">Pydantic Schemas</span>
-              <span class="skill-chip magnet">Phi-3</span>
-              <span class="skill-chip magnet">Llama-3</span>
+            <div class="chips-flow">
+              <span class="chip magnet">LangChain</span>
+              <span class="chip magnet">Claude 3.5 API</span>
+              <span class="chip magnet">OpenAI API</span>
+              <span class="chip magnet">Qdrant (1M+ vectors)</span>
+              <span class="chip magnet">FAISS</span>
+              <span class="chip magnet">BM25 Hybrid</span>
+              <span class="chip magnet">vLLM</span>
+              <span class="chip magnet">Pydantic</span>
+              <span class="chip magnet">Phi-3</span>
+              <span class="chip magnet">Llama-3</span>
             </div>
           </div>
 
-          <!-- Category 3: MLOps & Serving -->
-          <div class="stack-category-card spotlight-card" data-gsap="fade-up">
-            <div class="category-header">
-              <div class="category-icon">
-                <i data-lucide="server"></i>
-              </div>
-              <h3 class="category-name">MLOps & Serving</h3>
+          <div class="stack-box spotlight-card" data-gsap="fade-up">
+            <div class="box-head">
+              <i data-lucide="server"></i>
+              <h3>MLOps &amp; Serving</h3>
             </div>
-            <div class="skills-wrap">
-              <span class="skill-chip magnet">Docker Compose</span>
-              <span class="skill-chip magnet">GitHub Actions</span>
-              <span class="skill-chip magnet">FastAPI</span>
-              <span class="skill-chip magnet">Nginx Canary</span>
-              <span class="skill-chip magnet">Redis</span>
-              <span class="skill-chip magnet">MLflow</span>
-              <span class="skill-chip magnet">Evidently AI</span>
-              <span class="skill-chip magnet">ONNX INT8</span>
-              <span class="skill-chip magnet">Feast Feature Store</span>
-              <span class="skill-chip magnet">Weights & Biases</span>
+            <div class="chips-flow">
+              <span class="chip magnet">Docker Compose</span>
+              <span class="chip magnet">GitHub Actions</span>
+              <span class="chip magnet">FastAPI</span>
+              <span class="chip magnet">Nginx Canary</span>
+              <span class="chip magnet">Redis</span>
+              <span class="chip magnet">MLflow</span>
+              <span class="chip magnet">Evidently AI</span>
+              <span class="chip magnet">ONNX INT8</span>
+              <span class="chip magnet">Feast</span>
+              <span class="chip magnet">Weights &amp; Biases</span>
             </div>
           </div>
 
-          <!-- Category 4: Cloud & Data Engineering -->
-          <div class="stack-category-card spotlight-card" data-gsap="fade-up">
-            <div class="category-header">
-              <div class="category-icon">
-                <i data-lucide="cloud"></i>
-              </div>
-              <h3 class="category-name">Cloud & Data</h3>
+          <div class="stack-box spotlight-card" data-gsap="fade-up">
+            <div class="box-head">
+              <i data-lucide="cloud"></i>
+              <h3>Cloud &amp; Data</h3>
             </div>
-            <div class="skills-wrap">
-              <span class="skill-chip magnet">AWS (EC2, S3, SageMaker)</span>
-              <span class="skill-chip magnet">GCP (Vertex AI)</span>
-              <span class="skill-chip magnet">SQL</span>
-              <span class="skill-chip magnet">PySpark</span>
-              <span class="skill-chip magnet">Delta Lake</span>
-              <span class="skill-chip magnet">DuckDB</span>
-              <span class="skill-chip magnet">Bash Scripting</span>
-              <span class="skill-chip magnet">Git & LFS</span>
+            <div class="chips-flow">
+              <span class="chip magnet">AWS (EC2, S3, SageMaker)</span>
+              <span class="chip magnet">GCP (Vertex AI)</span>
+              <span class="chip magnet">SQL</span>
+              <span class="chip magnet">PySpark</span>
+              <span class="chip magnet">Delta Lake</span>
+              <span class="chip magnet">DuckDB</span>
+              <span class="chip magnet">Bash</span>
+              <span class="chip magnet">Git &amp; LFS</span>
             </div>
           </div>
 
@@ -767,111 +687,98 @@
       </div>
     </section>
 
-    <!-- SECTION 7: ABOUT ME & ENGINEERING PHILOSOPHY -->
-    <section id="about" class="section-padding about-section">
+    <!-- SECTION 7: EDITORIAL NARRATIVE & CONTACT -->
+    <section id="about" class="section-wrap about-section">
       <div class="container">
         
-        <div class="about-grid">
+        <div class="about-editorial-layout">
           
-          <div class="about-narrative spotlight-card" data-gsap="fade-up">
-            <div class="section-tag">
-              <i data-lucide="user"></i>
-              <span>ABOUT PRANAV</span>
+          <div class="about-col-left spotlight-card" data-gsap="fade-up">
+            <div class="editorial-tag">
+              <span class="tag-index">06</span>
+              <span class="tag-line"></span>
+              <span class="tag-title">ABOUT PRANAV</span>
             </div>
-            <h2 class="about-title">Systems that measure themselves and fix themselves.</h2>
+            <h2 class="about-headline">Systems that measure themselves and fix themselves.</h2>
             
-            <p class="about-p">
+            <p class="about-para">
               I'm a production-focused <strong>Machine Learning Engineer</strong> based in Pune, India. My engineering lifecycle spans the full loop: model training in PyTorch and Lightning, transformer fine-tuning with Hugging Face PEFT/LoRA, rigorous multi-judge evaluation, inference acceleration (vLLM, ONNX INT8, sub-50ms p50), and scalable container deployments on AWS and GCP.
             </p>
 
-            <p class="about-p">
+            <p class="about-para">
               Currently, I serve as a <strong>Data Analytics Intern (AI/ML) at Fourise Software Solutions, Pune</strong>, where I lead the engineering team behind <strong>GRGPT</strong>—delivering sub-3s semantic search across 1,037,086 vectors for 100K+ Maharashtra government documents. Concurrently completing my <strong>Master of Computer Applications (MCA)</strong> at DY Patil Technical Campus (expected March 2027).
             </p>
 
-            <div class="philosophy-callout">
-              <div class="callout-icon">
-                <i data-lucide="quote"></i>
-              </div>
-              <div class="callout-text">
-                "I care about answers being <strong>correct, not just fluent</strong>. So I measure everything: judge agreement, latency percentiles, embedding drift, and peak VRAM. I like systems that notice their own degradation and fix it without a human in the loop."
-              </div>
-            </div>
+            <blockquote class="about-quote">
+              "I care about answers being <strong>correct, not just fluent</strong>. So I measure everything: judge agreement, latency percentiles, embedding drift, and peak VRAM. I like systems that notice their own degradation and fix it without a human in the loop."
+            </blockquote>
 
-            <div class="about-meta-row">
-              <div class="meta-item">
+            <div class="credentials-list">
+              <div class="cred-item">
                 <i data-lucide="map-pin"></i>
-                <span>Pune, India (Available Worldwide)</span>
+                <span>Pune, India · Available for worldwide remote relocation</span>
               </div>
-              <div class="meta-item">
+              <div class="cred-item">
                 <i data-lucide="graduation-cap"></i>
-                <span>MCA · DY Patil Technical Campus ('27)</span>
+                <span>MCA · DY Patil Technical Campus (Graduating March 2027)</span>
               </div>
-              <div class="meta-item">
+              <div class="cred-item">
                 <i data-lucide="briefcase"></i>
-                <span>Lead AI/ML · Fourise Software Solutions</span>
+                <span>AI/ML Team Lead · Fourise Software Solutions</span>
               </div>
             </div>
           </div>
 
-          <!-- Quick Connect & Channels Card -->
-          <div class="about-sidebar">
-            <div class="connect-card spotlight-card" data-gsap="fade-up">
-              <h3 class="connect-card-title">Let's talk about ML systems or your team.</h3>
-              <p class="connect-card-subtitle">
+          <div class="about-col-right">
+            <div class="contact-card spotlight-card" data-gsap="fade-up">
+              <h3 class="contact-title">Let's talk about ML systems, LLM evaluation, or your team.</h3>
+              <p class="contact-sub">
                 Open to full-time engineering roles, high-impact internships, and remote-first opportunities globally.
               </p>
 
-              <div class="connect-buttons-list">
-                <a href="mailto:pranav.shree96@gmail.com" class="connect-channel-btn magnet">
-                  <div class="channel-icon">
-                    <i data-lucide="mail"></i>
+              <div class="contact-links-list">
+                <a href="mailto:pranav.shree96@gmail.com" class="c-link magnet">
+                  <div class="c-icon"><i data-lucide="mail"></i></div>
+                  <div class="c-details">
+                    <span class="c-type">Email</span>
+                    <span class="c-val">pranav.shree96@gmail.com</span>
                   </div>
-                  <div class="channel-info">
-                    <span class="channel-name">Email</span>
-                    <span class="channel-val">pranav.shree96@gmail.com</span>
-                  </div>
-                  <i data-lucide="chevron-right" class="channel-arrow"></i>
+                  <i data-lucide="arrow-up-right" class="c-arr"></i>
                 </a>
 
-                <a href="https://www.linkedin.com/in/pranav-jadhav-mlops" target="_blank" rel="noopener noreferrer" class="connect-channel-btn magnet">
-                  <div class="channel-icon">
-                    <i data-lucide="linkedin"></i>
+                <a href="https://www.linkedin.com/in/pranav-jadhav-mlops" target="_blank" rel="noopener noreferrer" class="c-link magnet">
+                  <div class="c-icon"><i data-lucide="linkedin"></i></div>
+                  <div class="c-details">
+                    <span class="c-type">LinkedIn</span>
+                    <span class="c-val">in/pranav-jadhav-mlops</span>
                   </div>
-                  <div class="channel-info">
-                    <span class="channel-name">LinkedIn</span>
-                    <span class="channel-val">in/pranav-jadhav-mlops</span>
-                  </div>
-                  <i data-lucide="chevron-right" class="channel-arrow"></i>
+                  <i data-lucide="arrow-up-right" class="c-arr"></i>
                 </a>
 
-                <a href="https://huggingface.co/shreecloud" target="_blank" rel="noopener noreferrer" class="connect-channel-btn magnet">
-                  <div class="channel-icon">
-                    <span class="hf-emoji">🤗</span>
+                <a href="https://huggingface.co/shreecloud" target="_blank" rel="noopener noreferrer" class="c-link magnet">
+                  <div class="c-icon"><span class="emoji-hf">🤗</span></div>
+                  <div class="c-details">
+                    <span class="c-type">Hugging Face</span>
+                    <span class="c-val">huggingface.co/shreecloud</span>
                   </div>
-                  <div class="channel-info">
-                    <span class="channel-name">Hugging Face</span>
-                    <span class="channel-val">huggingface.co/shreecloud</span>
-                  </div>
-                  <i data-lucide="chevron-right" class="channel-arrow"></i>
+                  <i data-lucide="arrow-up-right" class="c-arr"></i>
                 </a>
 
-                <a href="https://github.com/pranavshree-ai/pranavshree-ai" target="_blank" rel="noopener noreferrer" class="connect-channel-btn magnet">
-                  <div class="channel-icon">
-                    <i data-lucide="github"></i>
+                <a href="https://github.com/pranavshree-ai/pranavshree-ai" target="_blank" rel="noopener noreferrer" class="c-link magnet">
+                  <div class="c-icon"><i data-lucide="github"></i></div>
+                  <div class="c-details">
+                    <span class="c-type">GitHub</span>
+                    <span class="c-val">github.com/pranavshree-ai</span>
                   </div>
-                  <div class="channel-info">
-                    <span class="channel-name">GitHub</span>
-                    <span class="channel-val">github.com/pranavshree-ai</span>
-                  </div>
-                  <i data-lucide="chevron-right" class="channel-arrow"></i>
+                  <i data-lucide="arrow-up-right" class="c-arr"></i>
                 </a>
               </div>
 
-              <div class="status-box">
-                <div class="pulse-indicator"></div>
+              <div class="status-banner">
+                <span class="status-live-dot"></span>
                 <div>
-                  <div class="status-strong">Active Status</div>
-                  <div class="status-sub">Ready for system review & interviews</div>
+                  <div class="status-txt-strong">Active Engineering Status</div>
+                  <div class="status-txt-sub">Ready for technical system reviews &amp; conversations</div>
                 </div>
               </div>
             </div>
@@ -884,19 +791,53 @@
 
   </main>
 
-  <!-- FOOTER -->
-  <footer id="site-footer">
-    <div class="container footer-container">
-      <div class="footer-left">
-        <span class="footer-brand">Pranav Jadhav</span>
-        <span class="footer-sep">·</span>
-        <span class="footer-copy">Machine Learning Engineer — LLMOps & MLOps</span>
+  <!-- YAROS-INSPIRED FLOATING DOCK NAVIGATION -->
+  <aside id="floating-dock" aria-label="Dock Navigation">
+    <nav class="dock-bar">
+      <a href="#hero" class="dock-btn magnet" title="Top / Overview">
+        <i data-lucide="home"></i>
+        <span class="dock-tooltip">Overview</span>
+      </a>
+      <a href="#loop" class="dock-btn magnet" title="Self-Healing Loop">
+        <i data-lucide="cpu"></i>
+        <span class="dock-tooltip">Architecture</span>
+      </a>
+      <a href="#metrics" class="dock-btn magnet" title="Production Metrics">
+        <i data-lucide="bar-chart-2"></i>
+        <span class="dock-tooltip">Metrics</span>
+      </a>
+      <a href="#projects" class="dock-btn magnet" title="Selected Systems">
+        <i data-lucide="folder-git-2"></i>
+        <span class="dock-tooltip">Projects</span>
+      </a>
+      <a href="#system" class="dock-btn magnet" title="System Specification">
+        <i data-lucide="terminal"></i>
+        <span class="dock-tooltip">Terminal</span>
+      </a>
+      <a href="#stack" class="dock-btn magnet" title="Production Toolkit">
+        <i data-lucide="layers"></i>
+        <span class="dock-tooltip">Stack</span>
+      </a>
+      <a href="#about" class="dock-btn magnet" title="About &amp; Contact">
+        <i data-lucide="user"></i>
+        <span class="dock-tooltip">Contact</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- EDITORIAL FOOTER -->
+  <footer id="editorial-footer">
+    <div class="container footer-content">
+      <div class="foot-left">
+        <span class="foot-brand">Pranav Jadhav</span>
+        <span class="foot-dot">·</span>
+        <span class="foot-sub">Machine Learning Engineer</span>
       </div>
-      <div class="footer-center">
-        <span class="footer-tagline">Built with Three.js 3D Fog · GSAP · Lenis · React Bits</span>
+      <div class="foot-center">
+        <span class="foot-craft">Haute Digital Craftsmanship · Nocturne Atelier Edition</span>
       </div>
-      <div class="footer-right">
-        <a href="#hero" class="back-to-top magnet" aria-label="Back to top">
+      <div class="foot-right">
+        <a href="#hero" class="top-anchor magnet">
           <span>Back to Top</span>
           <i data-lucide="arrow-up"></i>
         </a>
@@ -905,17 +846,11 @@
   </footer>
 
   <!-- DEPENDENCY SCRIPTS -->
-  <!-- 1. Three.js r134 (certified compatibility with Vanta.js Fog) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <!-- 2. Vanta.js Fog Effect -->
   <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.fog.min.js"></script>
-  <!-- 3. GSAP Core & ScrollTrigger Plugin -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <!-- 4. Lenis Smooth Scroll -->
   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
-
-  <!-- Application Logic (React Bits spotlight, 3D tilt, decrypt, magnetic interactions, simulator) -->
   <script src="main.js"></script>
 </body>
 </html>
